@@ -44,5 +44,9 @@ curl -X SEARCH -d '{"query":{"contains":["liveblog"]}}' -H 'Content-Type: applic
 curl -X POST -d '{"user_id":"103", "request_id":"104", "search_spec":{"query":{"contains":["liveblog"]}}}' -H 'Content-Type: application/json' http://localhost:9060/feeds/twt/search/
 ```
 
-
+### getting citizen alias based on a twitter user, with asking Twitter for that info if such citizen alias not stored yet
+```
+curl -X GET http://localhost:9060/feeds/twt/citizen/alias/name/_twitter_screen_name_of_a_twitter_user_?force=1
+curl -X GET http://localhost:9060/feeds/twt/citizen/alias/id/_twitter_user_id_of_a_twitter_user_?force=1
+```
 
