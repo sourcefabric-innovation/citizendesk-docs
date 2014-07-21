@@ -11,6 +11,6 @@ Here we collect a list of the properties which should be modified just by the co
 - `coverages.published`
 - `coverages.outgested`
 
-cor: https://github.com/sourcefabric-innovation/citizendesk-core
-int: https://github.com/sourcefabric-innovation/citizendesk-interface
-fro: https://github.com/sourcefabric-innovation/citizendesk-frontend
+[cor]: https://github.com/sourcefabric-innovation/citizendesk-core
+[int]: https://github.com/sourcefabric-innovation/citizendesk-interface
+[fro]: https://github.com/sourcefabric-innovation/citizendesk-frontend
