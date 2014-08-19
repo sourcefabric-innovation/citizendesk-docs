@@ -17,4 +17,4 @@ translation since they have no effect within the HTML markup.
 
 #### Citizendesk or Citizen Desk?
 
-Currently the correct way to refer to the product is *Citizendesk*
+Currently the correct way to refer to the product is **Citizen Desk**, not Citizendesk
