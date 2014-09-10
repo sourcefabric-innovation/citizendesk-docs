@@ -9,3 +9,4 @@ The server part of the whole system is based on Python scripts, uses MongoDB as 
 
 Notice that the ingest parts can be used for two-way communication, i.e. for both receiving information from citizens, and for asking the citzens.
 
+To simplify dealing with ingest sources, scripts for each ingest type are split into two parts: one part is bound to the ingest source, and it talks the ingest-source language. Its coupled part is inside the core system, it takes json-structured data from the source-bound part, and it saves the data into database accordingly.
