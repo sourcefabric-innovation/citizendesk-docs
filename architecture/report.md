@@ -69,7 +69,7 @@ The main fields of a `report` are:
   + `sources` list of links to the original report source itself
   + `links` list of links from the report
   + `notices_inner` list of editorial comments for internal use
-  + `notices_outer` list of editorial comments for external use
+  + `notices_outer` list of editorial comments for external use. currently a list of strings where just the first element is supposed to be shown and edited
   + `comments` list of comments by citizens
   + `tags` list of general tags, hashtags, keywords
 
