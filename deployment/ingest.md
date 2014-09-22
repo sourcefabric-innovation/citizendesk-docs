@@ -7,6 +7,8 @@ Ingest components require additional outer processes outside the main _citizende
 or e.g. the _smsd-relay_ that communicates via the _FrontlineSMS-like_ interface.
 For now, regular testing has been only done with _FrontlineSMS_ cloud.
 
++ URL-links ingest is a special type of ingest that (by now) only have the inner part, while the outer part is played by UI.
+
 **Newstwister**
 
 By default, _Newstwister_ expects to be installed at `/opt/newstwister` though it can be put into any other directory (then the startup scripts have to be adjusted). If it is at this `/opt/newstwister` directory, the startup script is the `/opt/newstwister/etc/init.d/newstwister` shell file.
@@ -30,4 +32,9 @@ When using _FrontlineSMS_, it is necessary to configure `HTTP Web Connection` th
 It should have API enabled, the API secret key should be set for SMS sending at _citizendesk-core_ too, it should be set with `do not use a keyword`, and it can get any name.
 
 For actual sending and receiving SMS via _FrontlineSMS_, the _FrontlineSMS_ account should have set a connection to outer SMS provider.
+
+**URL-links**
+
+Ingest based on general URL links require to have a file with stated effective top level domains, so that the _citizendesk-core_ can find the actual specific domain.
+The current set of definitions is taken from `https://publicsuffix.org/list/effective_tld_names.dat` that is stored in `opt/citizendesk/etc/citizendesk/effective_tld_names.dat` file.
 
