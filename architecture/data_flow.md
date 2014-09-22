@@ -17,7 +17,7 @@ Regarding _Liveblog_, the connection between _Citizen Desk_ and _Liveblog_ has t
 + having (active) coverages in _Citizen Desk_ itself that correspond to particular _Liveblog_ blogs
 + setting the _Citizen Desk_ (Liveblog-oriented) stream at _Liveblog_ as a chaining blog provider
 
-When a coverage (from the upstream _Citizn Desk_) is selected for a _Liveblog_ blog with auto-publish setting on,
+When a coverage (from the upstream _Citizen Desk_) is selected for a _Liveblog_ blog with auto-publish setting on,
 any report in _Citizen Desk_ that is published into the selected coverage is automatically received and displayed at the respective _Liveblog_ blog.
 The link for the main Liveblog-oriened output from _Citizen Desk_ that shall be used in _Liveblog_ chaining configuration:
 + `http://_citizendesk_deployment_/streams/liveblog/coverage/`
