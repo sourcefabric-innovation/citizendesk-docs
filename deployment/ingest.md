@@ -19,6 +19,10 @@ Notice that the default deployment type expects that _Newstwister_ should run at
 
 Log-rotating is covered by config at the `/opt/newstwister/etc/logrotate.d/newstwister` file.
 
+Communication with Twitter requires API keys. For common (read-only) REST-based actions, _Newstwister_ uses a set of the keys stored at the `/opt/newstwister/etc/newstwister/oauth/search_auth.py` file.
+Monitors and tweet-sending actions (that need multiple key sets) use API keys stored in database, at `twt_oauths`, `twt_authorized` collections for monitors, tweet-sending, respectively.
+
+
 **FrontlineSMS**
 
 When using _FrontlineSMS_, it is necessary to configure `HTTP Web Connection` that uploads incoming SMS into _Citizen Desk_. The web-connection should lead to `http://citizendesk.deployment/ingest/sms/feed/` with (preferably) POST requests. It should contain `pass` field with a chosen password, `phone` message-src-number, `text` for message-body, and `time` for message-timestamp. (The field names can be different if set accordinly in the main part of citizendesk-core too.)
