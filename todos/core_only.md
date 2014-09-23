@@ -3,11 +3,15 @@
 
 + tweet related
   + *pick tweet* by id/url (different than general url-based *web_links*)
+  + more advanced criteria for *monitors* and *searches*
   + *authorize keys* for tweet sending (do not use currently used keys)
   + *tweet* sending/replying
 
 + media related
   + links to *image-loaded services*
+
++ sms related
+  + sending SMS at a new session
 
 Below we describe the cases in more detail.
 
@@ -20,6 +24,14 @@ with [data](https://github.com/sourcefabric-innovation/citizendesk-core/blob/mas
 `{"endpoint_id":<endpoint_id>,"tweet_spec":{"tweet_id":<tweet_id>}}`
 or
 `{"endpoint_id":<endpoint_id>,"tweet_spec":{"tweet_url":<tweet_url>}}`
+
+---
+
++ **More advanced criteria for monitors and searches**
+
+Look at the core for schemas of
+[monitors](https://github.com/sourcefabric-innovation/citizendesk-core/blob/master/src/citizendesk/feeds/twt/filter/storage.py#L20)
+and [searches](https://github.com/sourcefabric-innovation/citizendesk-core/blob/master/src/citizendesk/feeds/twt/search/storage.py#L20).
 
 ---
 
@@ -70,4 +82,16 @@ and since we have a basic set of remote services loaded into database
 `/feeds/img/service/resolved/report/<report_id>/`
 
 It returns list (according to the list of linked images) of structures (according to the set of the services).
+
+---
+
++ **sending SMS at a new session**
+
+We can send SMS as a start of new session, i.e. not as a reply to another SMS.
+
+It is done via [POST to /feeds/sms/send/](https://github.com/sourcefabric-innovation/citizendesk-core/blob/master/src/citizendesk/feeds/sms/send/connect.py#L9)
+with data that have to contain `message`, `targets`, `user_id`, from the schema that is described
+at [core part](https://github.com/sourcefabric-innovation/citizendesk-core/blob/master/src/citizendesk/feeds/sms/send/storage.py#L20)
+
+Notice that the SMS sending can be done to a group of recipients specified at the `targets` list.
 
