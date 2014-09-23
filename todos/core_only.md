@@ -11,7 +11,8 @@
 
 Below we describe the cases in more detail.
 
-+ Pick tweet by id/url (different than general url-based *web_links*)
+
+**Pick tweet by id/url (different than general url-based *web_links*)**
 
 [POST to /feeds/twt/pick/](https://github.com/sourcefabric-innovation/citizendesk-core/blob/master/src/citizendesk/feeds/twt/pick/connect.py#L9)
 with [data](https://github.com/sourcefabric-innovation/citizendesk-core/blob/master/src/citizendesk/feeds/twt/pick/storage.py#L20):
@@ -20,7 +21,7 @@ or
 `{"endpoint_id":<endpoint_id>,"tweet_spec":{"tweet_url":<tweet_url>}}`
 
 
-+ Authorize keys for tweet sending (do not use currently used keys for that)
+**Authorize keys for tweet sending (do not use currently used keys for that)**
 
 Done in two phases, all the data stored together at structure [described at core](https://github.com/sourcefabric-innovation/citizendesk-core/blob/master/src/citizendesk/feeds/twt/authorized/storage.py#L20).
 
@@ -34,7 +35,7 @@ with data:
 `{"spec":{"verifier_pin":<verifier_pin>}}`
 
 
-+ Tweet sending/replying
+**Tweet sending/replying**
 
 Can be done as a tweet in a new session, or a reply to a tweet (thus part of the session of that reply-to tweet).
 If a reply, tweet has to start with *@user_name*.
@@ -49,7 +50,7 @@ and the rest is [according to core](https://github.com/sourcefabric-innovation/c
 Notice that *endpoint_id* is used as *channel.value* (alike in the picking case) at the stored report data.
 
 
-+ Links to image-loaded services
+**Links to image-loaded services**
 
 When a report contains links to images (it is e.g. for some tweet-based and url-based reports),
 verifiers can try to use online services for making investigations based on those linked images.
