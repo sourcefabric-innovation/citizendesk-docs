@@ -31,7 +31,7 @@ or
 
 Look at the core for schemas of
 [monitors](https://github.com/sourcefabric-innovation/citizendesk-core/blob/master/src/citizendesk/feeds/twt/filter/storage.py#L20)
-and [searches](https://github.com/sourcefabric-innovation/citizendesk-core/blob/master/src/citizendesk/feeds/twt/search/storage.py#L20),
+and [searches](https://github.com/sourcefabric-innovation/citizendesk-core/blob/master/src/citizendesk/feeds/twt/search/storage.py#L20).
 
 ---
 
