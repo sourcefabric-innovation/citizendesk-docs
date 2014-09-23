@@ -11,6 +11,7 @@
 
 Below we describe the cases in more detail.
 
+---
 
 + **Pick tweet by id/url (different than general url-based *web_links*)**
 
@@ -20,6 +21,7 @@ with [data](https://github.com/sourcefabric-innovation/citizendesk-core/blob/mas
 or
 `{"endpoint_id":<endpoint_id>,"tweet_spec":{"tweet_url":<tweet_url>}}`
 
+---
 
 + **Authorize keys for tweet sending (do not use currently used keys for that)**
 
@@ -34,6 +36,7 @@ with data:
 with data:
 `{"spec":{"verifier_pin":<verifier_pin>}}`
 
+---
 
 + **Tweet sending/replying**
 
@@ -49,6 +52,7 @@ and the rest is [according to core](https://github.com/sourcefabric-innovation/c
 
 Notice that *endpoint_id* is used as *channel.value* (alike in the picking case) at the stored report data.
 
+---
 
 + **Links to image-loaded services**
 
